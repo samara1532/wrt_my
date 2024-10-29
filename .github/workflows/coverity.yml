@@ -2,7 +2,8 @@ name: Coverity scan build
 
 on:
   schedule:
-    - cron: '15 10 * * *'
+        tags:
+          - "*.*.*"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
